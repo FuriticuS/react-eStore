@@ -17,12 +17,14 @@ export function Header(){
   return (
     <header>
       <h1>Electronics store</h1>
-      <ul>
-        <li key='Home'>Home</li>
-        <li key='Catalog'>Catalog</li>
-        <li key='About Us'>About Us</li>
-        <li key='Contacts'>Contacts</li>
-      </ul>
+      <nav>
+        <ul>
+          <li key='Home'>Home</li>
+          <li key='Catalog'>Catalog</li>
+          <li key='About Us'>About Us</li>
+          <li key='Contacts'>Contacts</li>
+        </ul>
+      </nav>
       <p>
         {isOpen ?
           `Store open! The store will close in ${closeStore - hourNow} hours.`
