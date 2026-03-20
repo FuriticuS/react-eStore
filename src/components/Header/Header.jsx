@@ -1,4 +1,5 @@
 import {useEffect, useState} from "react";
+import styles from './Header.module.css';
 
 export function Header(){
   const date = new Date();
@@ -15,23 +16,25 @@ export function Header(){
   })
 
   return (
-    <header>
-      <h1>Electronics store</h1>
-      <nav>
+    <header className={styles.header}>
+      <div className={styles.headerTop}>
+        <h1 className={styles.title}>Electronics store</h1>
+        <p className={styles.workingHours}>
+          {isOpen ?
+            `Store open! The store will close in ${closeStore - hourNow} hours.`
+            : `Store close! The store will open in ${hourNow - openStore} hours.`}
+
+          <span> | {time.toLocaleTimeString('ru-RU')} {time.toLocaleDateString('ru-RU')}</span>
+        </p>
+      </div>
+      <nav className={styles.nav}>
         <ul>
-          <li key='Home'>Home</li>
-          <li key='Catalog'>Catalog</li>
-          <li key='About Us'>About Us</li>
-          <li key='Contacts'>Contacts</li>
+          <li key='Home'><a href="">Home</a></li>
+          <li key='Catalog'><a href="">Catalog</a></li>
+          <li key='About Us'><a href="">About Us</a></li>
+          <li key='Contacts'><a href="">Contacts</a></li>
         </ul>
       </nav>
-      <p>
-        {isOpen ?
-          `Store open! The store will close in ${closeStore - hourNow} hours.`
-          : `Store close! The store will open in ${hourNow - openStore} hours.`}
-
-        <span> | {time.toLocaleTimeString('ru-RU')} {time.toLocaleDateString('ru-RU')}</span>
-      </p>
     </header>
   )
 }
