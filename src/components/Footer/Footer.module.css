@@ -1,0 +1,48 @@
+
+/* Footer */
+.footer {
+  text-align: center;
+  font-size: 1.6rem;
+  color: #333;
+  background-color: #f4f4f4;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  margin-top: 2rem;
+}
+
+.footer h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.footer p {
+  font-size: 1.4rem;
+  margin-top: 0.5rem;
+  color: #555;
+}
+
+.order {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.btn {
+  color: #fff;
+  font-family: inherit;
+  border: none;
+  font-size: 1.6rem;
+  font-weight: 600;
+  background-color: #0070f3;
+  padding: 1.2rem 3rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #005bb5;
+}

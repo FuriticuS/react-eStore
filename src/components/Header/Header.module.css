@@ -47,7 +47,15 @@
 }
 
 .workingHours {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   font-size: 1.4rem;
   margin-top: 1rem;
   color: #f1f1f1;
+}
+
+.clock {
+  display: flex;
+  width: 150px;
 }

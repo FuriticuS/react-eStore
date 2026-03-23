@@ -24,7 +24,7 @@ export function Header(){
             `Store open! The store will close in ${closeStore - hourNow} hours.`
             : `Store close! The store will open in ${hourNow - openStore} hours.`}
 
-          <span> | {time.toLocaleTimeString('ru-RU')} {time.toLocaleDateString('ru-RU')}</span>
+          <span className={styles.clock}> | {time.toLocaleDateString('ru-RU')} {time.toLocaleTimeString('ru-RU')}</span>
         </p>
       </div>
       <nav className={styles.nav}>

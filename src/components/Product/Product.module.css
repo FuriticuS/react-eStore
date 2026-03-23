@@ -1,0 +1,55 @@
+.product {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 8px 24px rgba(0, 112, 243, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 36px rgba(0, 112, 243, 0.15);
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.8rem;
+  margin-bottom: 1.2rem;
+}
+
+.product div {
+  text-align: left;
+  padding: 0.5rem 0;
+}
+
+.product h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.product p {
+  font-size: 1.4rem;
+  color: #666;
+  font-weight: 400;
+  margin-bottom: 1.2rem;
+}
+
+.product span {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #0070f3;
+}
+
+.product.sold-out {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.product.sold-out span {
+  color: #ff4d4d;
+}

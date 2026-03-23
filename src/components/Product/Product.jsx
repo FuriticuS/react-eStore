@@ -1,6 +1,8 @@
+import style from './Product.module.css';
+
 export function Product(props) {
   return (
-    <li>
+    <li className={style.product}>
       <img src={props.products.photoName} alt=""/>
       <div>
         <h3>{props.products.name}</h3>
