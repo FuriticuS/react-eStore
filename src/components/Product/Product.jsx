@@ -1,13 +1,13 @@
 import style from './Product.module.css';
 
-export function Product(props) {
+export function Product({products}) {
   return (
     <li className={style.product}>
-      <img src={props.products.photoName} alt=""/>
+      <img src={products.photoName} alt=""/>
       <div>
-        <h3>{props.products.name}</h3>
-        <p>{props.products.description}</p>
-        <span>{props.products.price}</span>
+        <h3>{products.name}</h3>
+        <p>{products.description}</p>
+        <span>{products.price}</span>
       </div>
     </li>
   )
