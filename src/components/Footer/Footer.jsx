@@ -3,33 +3,40 @@ import {useState} from "react";
 
 export function Footer() {
   const [count, setCount] = useState(0)
+  const [isOpen, setIsOpen] = useState(false)
+
+  function toggle(){
+    setIsOpen(prev => !prev)
+  }
 
   return (
     <footer className={style.footer}>
-      {/* <span className="cross">&times;</span> */}
-      {/* <button>Начать</button> */}
+      {!isOpen ? <button onClick={toggle}>Начать</button> : <span className={style.cross} onClick={toggle}>&times;</span>}
 
-      <h1>Vite + React = Love</h1>
+      {isOpen &&
+        <>
+          <h1>Vite + React = {count >= 3 ? 'LOVE' : ''}</h1>
 
-      {/* <div className="logoContainer">
-        <img src="/vite.svg" className="logo" alt="Vite logo" />
-        <p>+</p>
-        <img src="/react.svg" className="logo" alt="React logo" />
-        <p>=</p>
-        <img src="/love.svg" className="logo" alt="Love logo" />
-      </div> */}
+          <div className={style.logoContainer}>
+            <img src="/vite.svg" className={`${style.logo} ${count>=1 ? style.active:""}`} alt="Vite logo"/>
+            <p>+</p>
+            <img src="/react.svg" className={`${style.logo} ${count>=2 ? style.active:""}`} alt="React logo"/>
+            <p>=</p>
+            <img src="/love.svg" className={`${style.logo} ${count>=3 ? style.active:""}`} alt="Love logo"/>
+          </div>
 
-      <hr />
+          <hr/>
 
-      <div className="card">
-        <p className="countParagraph">count is {count}</p>
-        <div className="incrementButtons">
-          <button onClick={() => setCount((prev) => prev + 1)}>+1</button>
-          <button onClick={() => setCount((prev) => prev - 1)}>-1</button>
-          <button onClick={() => setCount(0)}>Reset</button>
-        </div>
-      </div>
-
+          <div className={style.card}>
+            <p className={style.countParagraph}>count is {count}</p>
+            <div className={style.incrementButtons}>
+              <button onClick={() => setCount((prev) => prev + 1)}>+1</button>
+              <button onClick={() => setCount((prev) => prev - 1)}>-1</button>
+              <button onClick={() => setCount(0)}>Reset</button>
+            </div>
+          </div>
+        </>
+      }
     </footer>
   )
 }
