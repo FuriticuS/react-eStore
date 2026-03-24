@@ -6,7 +6,7 @@ export function Catalog({productData}) {
     <main className={style.catalog}>
       <ul className={style.products}>
         {productData.map(products => (
-          !products.soldOut && <Product key={products.id} products={products}/>
+          <Product key={products.id} products={products}/>
         ))}
       </ul>
     </main>

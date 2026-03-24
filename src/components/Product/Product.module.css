@@ -45,11 +45,11 @@
   color: #0070f3;
 }
 
-.product.sold-out {
+.soldOut {
   opacity: 0.6;
   pointer-events: none;
 }
 
-.product.sold-out span {
+.soldOut span {
   color: #ff4d4d;
 }
