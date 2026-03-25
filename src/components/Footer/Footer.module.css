@@ -33,7 +33,7 @@ hr {
   filter: none;
 }
 
-h1 {
+.footer h1 {
   font-size: 2rem;
   color: #333333;
   text-align: center;
