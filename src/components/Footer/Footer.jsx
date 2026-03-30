@@ -1,5 +1,6 @@
 import style from './Footer.module.css'
 import {useState} from "react";
+import {Button} from "../Button/Button.jsx";
 
 export function Footer() {
   const [count, setCount] = useState(0)
@@ -12,7 +13,7 @@ export function Footer() {
 
   return (
     <footer className={style.footer}>
-      {!isOpen ? <button onClick={toggle}>Начать</button> : <span className={style.cross} onClick={toggle}>&times;</span>}
+      {!isOpen ? <Button onClick={toggle} title={'Начать'} /> : <span className={style.cross} onClick={toggle}>&times;</span>}
 
       {isOpen &&
         <>
@@ -31,9 +32,9 @@ export function Footer() {
           <div className={style.card}>
             <p className={style.countParagraph}>count is {count}</p>
             <div className={style.incrementButtons}>
-              <button onClick={() => setCount((prev) => prev + 1)}>+1</button>
-              <button onClick={() => setCount((prev) => prev - 1)}>-1</button>
-              <button onClick={() => setCount(0)}>Reset</button>
+              <Button onClick={() => setCount((prev) => prev + 1)}>+1</Button>
+              <Button onClick={() => setCount((prev) => prev - 1)}>-1</Button>
+              <Button onClick={() => setCount(0)}>Reset</Button>
             </div>
           </div>
         </>
