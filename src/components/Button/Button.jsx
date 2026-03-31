@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import styles from './Button.module.css';
 
 export function Button({title, icon, style, disabled= false, children, onClick}) {
@@ -7,4 +8,13 @@ export function Button({title, icon, style, disabled= false, children, onClick})
       {title || children}
     </button>
   )
+}
+
+Button.propTypes = {
+  title: PropTypes.string,
+  icon: PropTypes.string,
+  style: PropTypes.object,
+  disabled: PropTypes.bool,
+  children: PropTypes.string,
+  onClick: PropTypes.func,
 }
